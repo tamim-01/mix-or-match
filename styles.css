@@ -1,0 +1,261 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+.overlay {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(75, 125, 161, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    z-index: 1; 
+    
+}
+
+.overlay div {
+    font-size: 85px;
+    font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+}
+
+.overlay {
+    display: none; 
+    
+    
+}
+
+body {
+    
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+
+
+
+.title {
+
+    font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+    font-size: 75px;
+    
+    position: absolute ;
+    transform: translate(-50% , -50%);
+    left : 50%;
+    top: 10%;
+    
+    
+    
+}
+.wrapper {
+    
+    
+    width: auto;
+    height: auto;
+    padding: 10px;
+    
+    position: absolute;
+    transform: translate(-50% , -50%);
+    left : 50%;
+    top: 50%;
+    
+    
+    
+    
+}
+
+.game-container{
+    position: relative;
+    width: 100%;
+    display: grid;
+    gap: 0.6em;
+    grid-template-columns: repeat( 8 , auto);
+    
+}
+
+.stats-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 10px;
+    text-align: left;
+    margin-bottom: 1.2em;
+    font-family: "Honk", system-ui;
+    
+}
+
+.stats-header  {
+    font-size: 45px;
+    font-weight: 600;
+    
+}
+.stats-header #time{
+    
+    width: 170px;
+}
+
+.stats-header img {
+    width: 60px;
+    border: #259aa3 2px solid;
+    border-radius: 50%;
+}
+.player-profile{
+    
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    
+    
+}
+
+.card-container {
+    position: relative;
+    width: 8.25em;
+    height: 12em;
+    cursor: pointer;
+    
+}
+
+.card-front ,
+.card-back {
+    
+    position: absolute;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #000000;
+    transition: transform 0.7s ease-out;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    background-color: #259aa3;
+    align-items: center;
+    
+    
+}
+.card-front img {
+    width: 100%;
+}
+
+.card-back img {
+    width: 75%;
+}
+.card-back{
+    background-color: #ffffff;
+    transform: rotateY(180deg);
+
+}
+
+.card-container.flipped .card-front {
+    transform: rotateY(180deg);
+}
+
+.card-container.flipped .card-back {
+    
+    transform: rotateY(0deg);
+}
+
+
+
+.card-front:hover img{
+
+    transform: scale(1.1);
+    transition: 0.1s ease-in-out;
+    
+    
+}
+/* .card-front:hover {
+    
+    transform: scale(1.1);
+    transition: 0.0001ms ease-in-out;
+    
+    
+} */
+
+.matched .card-back img{
+    
+    animation: dance 0.6s ease-in-out infinite;
+}
+@keyframes dance {
+    0% {
+        transform: rotate(20deg);
+    }
+    
+    50%{
+        transform: rotate(-20deg);
+    }
+    
+    100% {
+        transform: rotate(20deg);
+    }
+    
+}
+@media screen and (max-width : 1100px){
+
+.game-container{
+    grid-template-columns: repeat(4 , auto);
+    
+    
+}
+
+.stats-header{
+    top: 10%;
+    margin: 3em 0 1em 0;
+    
+    font-size: 30px;
+}
+.stats-header #time{
+    
+    width: 170px;
+}
+
+.title{
+    top: 0;
+    margin-top: 30px;
+    width: 293px;
+    height: 65px;
+    
+    font-size: 50px;
+}
+
+.card-container{
+    width: 100px;
+    height: 160px;
+}
+.wrapper{
+    width: 490px;
+}
+}
+
+.submit-score-bord{
+    
+    border-radius: 20px;
+    background-color: black;
+    font-size: 20px;
+    padding: 5px 20px 5px 20px;
+    font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+    width: 160px;
+};
+
+
+
+
+
+
+
