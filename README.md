@@ -1,0 +1,2 @@
+This is a pure HTML, CSS, and JavaScript mix-or-match game featuring a player scoreboard and local storage integration. The game saves user progress, including time, score, and flips, allowing you to pause and resume from where you left off when logging in with the same user. Due to some hardcoded URL changes, this game is currently designed to run only on localhost and cannot be deployed on a remote host.
+
